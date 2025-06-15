@@ -17,7 +17,7 @@ localdir = './' + hostfile
 outputFile = os.getenv('OUTPUTFILE')
 
 def update_tags(to_insert_str):
-    with pysftp.Connection(HOSTNAME, USERNAME, password = PASSWORD, port = 2022) as sftp:
+    with pysftp.Connection(HOSTNAME, USERNAME, password = PASSWORD, port = 22) as sftp:
         sftp.get(hostdir, localdir)
 
         f = open(localdir, 'r+')
